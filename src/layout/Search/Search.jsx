@@ -10,6 +10,9 @@ const Search = () => {
     const changeHandler = (event) => {
         const value = event.target.value;
         setSearchValue(value);
+        if (!value) {
+            setShowSearch(false);
+        }
     };
 
     const mouseEnterHandler = () => {
