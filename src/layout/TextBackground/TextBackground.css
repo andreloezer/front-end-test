@@ -1,0 +1,6 @@
+.text-background {
+    font-family: 'BebasNeueBold';
+    position: absolute;
+    white-space: nowrap;
+    user-select: none;
+}

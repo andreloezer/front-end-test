@@ -1,0 +1,63 @@
+.contact-us {
+    height: 95vh;
+    max-height: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-us .img-wrapper {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-us .img-wrapper img {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.contact-us h2 {
+    font-family: 'BebasNeueBold';
+    font-size: 4.38vw;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.88vw;
+}
+
+.contact-us p {
+    font-family: 'Raleway';
+    font-size: 0.88vw;
+    line-height: 2.19vw;
+    margin: 0.88vw 0;
+    text-align: center;
+    width: 40vw;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-us a {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'BebasNeueBold';
+    font-size: 1.97vw;
+    border: 0.13vw solid rgba(255, 255, 255, 1);
+    background: none;
+    border-radius: 0.15vw;
+    display: block;
+    padding: 0.66vw 1.75vw;
+    text-decoration: none;
+    margin: 1.75vw;
+    box-sizing: border-box;
+    transition: all 0.2s ease-out;
+}
+
+.contact-us a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}

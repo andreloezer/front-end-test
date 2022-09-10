@@ -1,0 +1,172 @@
+.newest-video {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn,
+.play-btn div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn {
+    border-radius: 4.6vw;
+    aspect-ratio: 1 / 1;
+    width: 9.2vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-out;
+    z-index: 5;
+}
+
+.play-btn > div {
+    border-radius: 3.75vw;
+    width: 7.5vw;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.play-btn > div > div {
+    border-radius: 2.9vw;
+    width: 5.8vw;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.play-btn-icon {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 5vw;
+    aspect-ratio: 1 / 1;
+}
+
+.play-btn-icon img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.play-btn-icon:hover {
+    cursor: pointer;
+}
+
+.play-btn.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.video-text {
+    position: absolute;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 8vw;
+    transition: all 0.2s ease-out;
+}
+
+.video-text.hidden {
+    transform: translateX(-40vw);
+}
+
+.video-text h2 {
+    text-transform: uppercase;
+    font-family: 'BebasNeueBold';
+    color: rgba(237, 31, 52, 0.6);
+    font-size: 4.82vw;
+    margin: 0;
+    text-align: start;
+}
+
+.video-text p {
+    text-align: start;
+    font-family: 'Raleway';
+    font-size: 1.07vw;
+    line-height: 2.2vw;
+    color: rgba(255, 255, 255, 1);
+}
+
+.gallery-wrapper {
+    position: relative;
+}
+
+.spotify-login {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.spotify-login a {
+    opacity: 0;
+    text-decoration: none;
+    font-family: 'BebasNeueRegular';
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 6vw;
+}
+
+.spotify-login:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.spotify-login:hover a {
+    opacity: 1;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery li {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery div {
+    
+    color: #ed1f34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 30%;
+    background-color: black;
+}
+
+.gallery figcaption {
+    text-transform: uppercase;
+    font-family: 'BebasNeueBold';
+    font-size: 3.26vw;
+    color: rgba(237, 31, 52, 1);
+    position: absolute;
+}
+
+.gallery div:nth-child(even) {
+    background-color: white;
+}

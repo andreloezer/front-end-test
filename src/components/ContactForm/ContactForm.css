@@ -1,0 +1,81 @@
+.contact-form {
+    height: 90vh;
+    max-height: 70vw;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36vw;
+    min-width: 30vh;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    width: 100%;
+}
+
+.contact-form .input {
+    padding: 1.13vw 1.5vw;
+    font-size: 0.9vw;
+    border: 0.1vw solid black;
+    resize: none;
+    font-weight: bold;
+    margin: 0.8vw 0;
+    box-sizing: border-box;
+    z-index: 5;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form input::placeholder,
+.contact-form input:focus-visible,
+.contact-form textarea,
+.contact-form textarea::placeholder {
+    font-family: 'BebasNeueBold';
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+    outline: none;
+}
+
+.contact-form input[type='submit'] {
+    font-family: 'BebasNeueRegular';
+    font-size: 0.9vw;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    padding: 0.66vw 4vw;
+    background-color: rgba(96, 96, 96, 1);
+    align-self: end;
+    margin: 0.9vw 0;
+}
+
+.contact-form .text-background {
+    position: absolute;
+}
+
+.contact-form .text-background.background-1 {
+    font-size: 40vh;
+    color: rgba(141, 141, 141, 0.1);
+    transform: translate(-59%, -67%) scaleY(0.7);
+}
+
+.contact-form .text-background.background-2 {
+    font-size: 60vh;
+    color: rgba(141, 141, 141, 0.1);
+    transform: translate(49.5%, 3%) scaleY(0.75);
+}

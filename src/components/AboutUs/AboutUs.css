@@ -1,0 +1,89 @@
+.about-us {
+    background-color: white;
+    display: flex;
+    font-family: 'BebasNeueBold';
+    height: 50vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-us .content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    max-height: inherit;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.about-us h2 {
+    text-transform: uppercase;
+    font-size: 2.89vw;
+}
+
+.about-us-text {
+    width: 50vw;
+    text-align: start;
+    box-sizing: border-box;
+    padding: 8% 9% 8% 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us-text p {
+    font-family: 'Raleway';
+    color: rgba(141, 141, 141, 1);
+    font-size: 0.99vw;
+    line-height: 2.1vw;
+}
+.about-us figure img  {
+    box-shadow: 0 0 10vh rgba(0, 0, 0, 0.4);
+}
+
+.about-us figure {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    justify-content: center;
+    position: relative;
+    transform: translateX(-12%);
+}
+
+.about-us .img-wrapper {
+    width: 40vw;
+}
+
+.about-us .img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.about-us figcaption {
+    color: rgba(237, 31, 52, 1);
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: bold;
+    font-size: 8.8vw;
+    transform: translate(67%, 135%);
+}
+
+.about-us .text-background {
+    z-index: 5;
+}
+
+.about-us .text-background.background-1 {
+    color: rgba(0, 0, 0, 0.05);
+    font-size: 18.3vw;
+    transform: translate(-20%, 60%);
+}
+
+.about-us .text-background.background-2 {
+    color: rgba(141, 141, 141, 0.05);
+    font-size: 30vw;
+    transform: translate(82%, 10%);
+}

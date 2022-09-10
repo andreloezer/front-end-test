@@ -1,0 +1,98 @@
+.jumbotron {
+    height: 100vh;
+    max-height: 130vw;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.jumbotron .background {
+    background-color: rgba(73, 73, 73, 0.2);
+    width: 100%;
+    height: inherit;
+    max-height: inherit;
+    position: absolute;
+    z-index: 0;
+}
+
+.decorations {
+    width: 34.5%;
+    display: flex;
+    padding-right: 3vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    left: -2.25vw;
+    top: -3.5vh;
+    font-size: 2vh;
+    font-size: 0.96vw;
+}
+
+.jumbotron span {
+    margin: 0 2vw 0 1.6vw;
+}
+
+.decorations div {
+    margin: 1.23vw 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'BebasNeueBold';
+}
+
+.decorations span,
+.decorations hr {
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.5;
+
+}
+
+.decorations hr {
+    width: 100%;
+    border: none;
+    height: 0.15vh;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.decorations .striked span {
+    opacity: 1;
+}
+
+.jumbotron .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; 
+    z-index: 1;
+    position: relative;
+    top: -3vh;
+    left: -3vh;
+}
+.jumbotron .text span {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.top-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'BebasNeueThin';
+    font-size: 5.36vw;
+    line-height: 3.573vw;
+}
+
+.mid-text {
+    font-family: 'BebasNeueBold';
+    font-size: 8.93vw;
+    line-height: 7vw;
+    color: rgba(237, 51, 32, 0.6);
+}
+
+.bottom-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'BebasNeueBold';
+    font-size: 5.36vw;
+    line-height: 4vw;
+}

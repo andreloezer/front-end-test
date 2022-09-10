@@ -1,0 +1,39 @@
+.header {
+    position: absolute;
+    width: 100%;
+    min-height: 13vh;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'BebasNeueBold';
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.header-div {
+    width: 8vh;
+}
+
+.header-div:first-of-type:hover {
+    cursor: pointer;
+}
+
+.header-div:last-of-type {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.header .img-wrapper {
+    width: 3vh;
+}
+
+.header .img-wrapper img {
+    width: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 3.48vh;
+}

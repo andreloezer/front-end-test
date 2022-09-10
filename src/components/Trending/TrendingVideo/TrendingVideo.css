@@ -1,0 +1,20 @@
+.trending-video {
+    width: 100%;
+}
+
+.progress-bar {
+    border: none;
+    background-color: rgba(237, 31, 52, 1);
+    height: 1vh;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    left: 0;
+    transition: all 0.2s ease-out;
+}
+
+.progress-bar.hidden {
+    transform: translateY(-1vh);
+    opacity: 0;
+}

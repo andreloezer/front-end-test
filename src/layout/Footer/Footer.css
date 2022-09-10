@@ -1,0 +1,24 @@
+.footer {
+    height: 11.2vw;
+    background-color: rgba(34, 34, 34, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5vw 0 4.5vw 0;
+}
+
+.footer h2 {
+    font-family: 'BebasNeueBold';
+    font-size: 2.85vw;
+    text-transform: uppercase;
+    color: white;
+    margin: 1vw;
+}
+
+.footer span {
+    font-family: 'BebasNeueThin';
+    font-size: 1.78vw;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,32 @@
+.search {
+    display: flex;
+    border-radius: 3vw;
+    padding: 0 1.2vw;
+}
+
+.search.active {
+    background-color: rgba(73, 73, 73, 1);
+}
+
+.search input {
+    width: 0;
+    transition: all 0.2s ease-in;
+    outline: none;
+    border: none;
+    background-color: rgba(73, 73, 73, 0);
+    font-family: 'Raleway-Regular';
+    font-size: 0.7vw;
+}
+
+.active input {
+    display: block;
+    width: 26vh;
+    background-color: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.active input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    font-family: 'Raleway-Regular';
+}
