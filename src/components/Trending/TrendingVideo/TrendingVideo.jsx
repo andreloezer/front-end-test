@@ -11,7 +11,7 @@ const TrendingVideo = (props) => {
             <video
                 className='trending-video'
                 poster={props.poster}
-                autoplay
+                autoPlay
                 controls={props.showControls}
                 muted={props.showControls}
             ></video>
