@@ -28,7 +28,7 @@ const Trending = () => {
     }, []);
 
     // Spotify API implemented using this video as reference: https://youtu.be/wBq3HCvYfUg
-    const CLIENT_ID = '6fe905014dde46afa98d13fd6de2e967';
+    const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const REDIRECT_URI = 'http://localhost:3000/';
     const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
     const RESPONSE_TYPE = 'token';
