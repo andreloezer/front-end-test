@@ -6,63 +6,75 @@ const Jumbotron = () => {
 
     const GALLERY_UPDATE_DELAY = 5000;
 
+    const [ slickGallery, setSlickGallery ] = useState(true);
     const [ selectedItem, setSelectedItem ] = useState(2);
-
     const [ gallery, setGallery ] = useState([
         {
             background: '/images/concert.png',
             top: 'Lorem ipsum',
             mid: 'dolor sit',
             bottom: 'amet consectetur',
-            selected: true,
         },
         {
             background: '/images/trending.png',
             top: 'dolor sit',
             mid: 'Lorem ipsum',
             bottom: 'amet consectetur',
-            selected: false,
         },
         {
             background: '/images/jumbotron.png',
             top: 'A Safe Kind',
             mid: 'Music Is',
             bottom: 'Of High',
-            selected: false,
         },
         {
             background: '/images/hire-us.png',
             top: 'amet consectetur',
             mid: 'dolor sit',
             bottom: 'Lorem ipsum',
-            selected: false,
         }
     ]);
 
-    const changeGallery = (new_index) => { setSelectedItem(new_index) };
+    const alterDisplayItem = (new_index) => { setSelectedItem(new_index) };
 
-    // Alternate between the gallery items
+    // Slick between gallery items
     useEffect(() => {
+        if (!slickGallery) { return; }
+
         let index = selectedItem;
-        setInterval(() => {
-            changeGallery(index);
+        const changeInterval = setInterval(() => {
+            alterDisplayItem(index);
             index++;
             if (index === gallery.length) { index = 0; }
         }, GALLERY_UPDATE_DELAY);
-    }, []);
 
+        // Clean up
+        return () => clearInterval(changeInterval);
+    }, [gallery.length, selectedItem, slickGallery]);
+
+    // Handlers
     const clickHandler = (index) => {
-        changeGallery(index);
+        alterDisplayItem(index);
     };
 
+    const selectorEnterHandler = () => {
+        setSlickGallery(false);
+    };
+
+    const selectorLeaveHandler = () => {
+        setSlickGallery(true);
+    };
+
+    // Gallery elements
     const selectorList = [];
     const galleryList = [];
-
     gallery.forEach((item, index) => {
         selectorList.push(
             <li
                 key={index}
                 onClick={() => clickHandler(index)}
+                onMouseEnter={selectorEnterHandler}
+                onMouseLeave={selectorLeaveHandler}
                 className={`selector-item${selectedItem === index ? ' selected' : ''}`}
             >
                 <hr size='1' />
