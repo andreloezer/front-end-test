@@ -2,16 +2,26 @@
     width: 100%;
 }
 
-.progress-bar {
+.trending hr {
     border: none;
-    background-color: rgba(237, 31, 52, 1);
     height: 1vh;
     margin: 0;
     position: absolute;
     display: flex;
     align-self: flex-end;
+}
+
+.progress-bar {
+    background-color: rgba(237, 31, 52, 1);
     left: 0;
     transition: all 0.2s ease-out;
+}
+
+.progressBarClickable {
+    opacity: 0;
+    width: 100%;
+    z-index: 5;
+    cursor: pointer;
 }
 
 .progress-bar.hidden {
