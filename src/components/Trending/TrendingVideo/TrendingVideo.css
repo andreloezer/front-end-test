@@ -14,7 +14,8 @@
 .progress-bar {
     background-color: rgba(237, 31, 52, 1);
     left: 0;
-    transition: all 0.2s ease-out;
+    animation-name: initialProgress;
+    transition: transform, opacity, 0.2s ease-out;
 }
 
 .progressBarClickable {
@@ -27,4 +28,13 @@
 .progress-bar.hidden {
     transform: translateY(-1vh);
     opacity: 0;
+}
+
+@keyframes initialProgress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }

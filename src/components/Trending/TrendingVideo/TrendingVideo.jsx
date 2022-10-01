@@ -5,20 +5,22 @@ import './TrendingVideo.css';
 const TrendingVideo = (props) => {
 
     const [ progressBarWidth, setProgressBarWidth ] = useState(0);
-
-    const UPDATE_DELAY = 100;
+    const [ progressBarDelay, setProgressBarDelay ] = useState(0);
     
     const videoEl = useRef();
 
     // Update progress bar
     useEffect(() => {
-        setInterval(() => {
+        const delay = videoEl.current.duration;
+        const updateProgressBar = setInterval(() => {
             const currentTime = videoEl.current.currentTime;
             const duration = videoEl.current.duration;
             const currentProgress = 100 - ((duration - currentTime) / duration * 100);
 
             setProgressBarWidth(currentProgress);
-        }, UPDATE_DELAY);
+            setProgressBarDelay(delay);
+        }, delay);
+        return () => clearInterval(updateProgressBar);
     }, []);
 
     // Update video progress
@@ -50,7 +52,10 @@ const TrendingVideo = (props) => {
                 muted={!props.showControls}
             ></video>
             <hr
-                style={{width: `${progressBarWidth}%`}}
+                style={{
+                    width: `${progressBarWidth}%`,
+                    animationDuration: `${progressBarDelay}ms`,
+                }}
                 className={progressBarClass}
             ></hr>
             <hr
